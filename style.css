@@ -1,0 +1,75 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+.grid {
+	font-size: 0px; /*keeps spaces between the grid elements to size 0 */
+	text-align: justify;
+	position: relative;
+}
+
+/**
+ * needed to make the grid elements justify themselves
+ */
+.grid::after {
+	content: "";
+	display: inline-block;
+	width: 100%;
+}
+
+.grid > * {
+	display: inline-block;
+	width: 100%; /* Remember, the reason this is 100% is cuz it's built mobile first */
+	text-align: left;
+	font-size: medium; /* resets the font size since it was set to 0px inside the grid */
+	vertical-align: top;
+}
+
+/*
+    add a media query to handle screensizes, note the semantic name I chose to give this CSS class:
+
+    .grid- "a grid class"
+    -2- "2 columns"
+    -480 "when the screen is atleast 480px wide"
+*/
+
+@media (min-width: 480px) {
+	.grid-2-480 > * { width: 48%; }
+}
+
+@media (min-width: 800px) {
+	.grid-3-800 > * {width: 31%; }
+}
+
+/* less re-usable styles are put into another CSS class so that I can reuse .grid on other parts of a site */
+.salmon-grid > * {
+	background-color: salmon;
+	padding: 2em;
+	color: white;
+	margin-bottom: 2em;
+}
+
+.squarify > *::after {
+	content: "";
+	display: block;
+	padding-top: 100%;
+}
+
+.centerify {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.products {
+	position: absolute;
+}
+
+
+/*.picture {
+	background-image: url(http://tympanus.net/Blueprints/ProductGridLayout/images/1_front.png);
+}
+*/
+
+
