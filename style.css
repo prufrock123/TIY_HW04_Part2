@@ -113,10 +113,10 @@ body {
 	transform: translate(-50%, -50%) translateZ(0);
 	z-index: 1;
 }
-.options > * > .fa-spin {
+/*.options > * > .fa-spin {
 	top: 17%;
 	left: 20%;
-}
+}*/
 .options > *::after {
     content: "";
     display: block;
