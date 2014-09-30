@@ -25,6 +25,10 @@
 	vertical-align: top;
 }
 
+.grid-5-options > * {
+	width: 18%;
+}
+
 /*
     add a media query to handle screensizes, note the semantic name I chose to give this CSS class:
 
@@ -44,12 +48,12 @@
 /* less re-usable styles are put into another CSS class so that I can reuse .grid on other parts of a site */
 .salmon-grid > * {
 	background-color: salmon;
-	padding: 2em;
+	/*padding: 2em;*/
 	color: white;
 	margin-bottom: 2em;
 }
 
-.squarify > *::after {
+.squarify > *::before {
 	content: "";
 	display: block;
 	padding-top: 100%;
@@ -63,7 +67,23 @@
 }
 
 .products {
-	position: absolute;
+	position: relative;
+}
+
+.options {
+	display: block;
+	height: 5em;
+}
+
+.options > div {
+	display: inline-block;
+	border: ;
+}
+
+.options > *::after{
+	content: "";
+	display: block;
+	padding-top: 100%;
 }
 
 
