@@ -1,6 +1,11 @@
 *, *::before, *::after {
     box-sizing: border-box;
 }
+body {
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-top: 2%;
+}
 .grid {
     font-size: 0px;
     /*keeps spaces between the grid elements to size 0 */
@@ -63,7 +68,7 @@
     background-color: #FFFFFF;
     /*padding: 2em;*/
     color: white;
-    margin-bottom: 15em;
+    margin-bottom: 8em;
     border: 2px #5CA4D7 solid;
 }
 .squarify > *::before {
@@ -88,7 +93,7 @@
     position: relative;
     overflow: auto;
     border-top: 2px #5CA4D7 solid;
-}
+} 
 .options > * {
     display: block;
     float: left;
@@ -98,13 +103,19 @@
     position: relative;
 }
 .options > * > .fa {
+/*	font: normal normal normal 14px/1 FontAwesome;	*/
 	text-align: center;
-	font-size: 1.5em;
+	font-size: 2.5em;
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	color: #5CA4D7;
 	transform: translate(-50%, -50%) translateZ(0);
 	z-index: 1;
+}
+.options > * > .fa-spin {
+	top: 17%;
+	left: 20%;
 }
 .options > *::after {
     content: "";
@@ -130,8 +141,12 @@ input[type="checkbox"]:hover {
     cursor: pointer;
 }
 input[type="checkbox"]::after {
-    content: "\f079";
+    content: "\f0e7";
+    font: normal normal normal 28px/1 FontAwesome;
+    text-align: center;
+    line-height: 1.6em;
     background-color: #FFFFFF;
+    color: #5CA4D7;
     border: 2px #5CA4D7 solid;
     display: block;
     position: absolute;
