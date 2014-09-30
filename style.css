@@ -113,6 +113,13 @@ body {
 	transform: translate(-50%, -50%) translateZ(0);
 	z-index: 1;
 }
+.options > *:hover {
+    background-color: #5CA4D7;
+    cursor: pointer;
+}
+.options > *:hover > .fa {
+    color: white;
+}
 /*.options > * > .fa-spin {
 	top: 17%;
 	left: 20%;
@@ -126,6 +133,8 @@ body {
 .cart {
 	border-right-color: transparent;
 }
+
+
 
 /* checkbox */
 
@@ -157,9 +166,11 @@ input[type="checkbox"]::after {
 }
 input[type="checkbox"]:hover::after {
     background-color: #5CA4D7;
+    color: white;
 }
 input[type="checkbox"]:checked::after {
-    background-color: #2a7ad7;
+    background-color: #5CA4D7;
+    color: white;
     transition: transform .5s ease;
 }
 input[type="checkbox"]:checked, img:nth-of-type(1) {
