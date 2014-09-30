@@ -31,7 +31,7 @@
 }
 
 .grid-5-options > * {
-	width: 19%;
+	width: 20%;
 	text-align: left;
 	font-size: medium;
 }
@@ -91,7 +91,7 @@
 
 .options > div {
 	display: inline-block;
-	border-top: 2px #5CA4D7 solid;
+	border: 2px #5CA4D7 solid;
 	background-color: white;
 }
 
@@ -101,10 +101,69 @@
 	padding-top: 100%;
 }
 
+/* checkbox */
+
+input[type="checkbox"] {
+	position: absolute;
+	top: -2px;
+	right: -2px;
+	width: 3em;
+	height: 3em;
+	margin: 0px;
+}
+
+input[type="checkbox"]:hover {
+	cursor: pointer;
+}
+
+input[type="checkbox"]::after {
+	content: "";
+	background-color: #FFFFFF;
+	border: 2px #5CA4D7 solid;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+}
+
+input[type="checkbox"]:hover::after {
+	background-color: #5CA4D7;
+}
+
+input[type="checkbox"]:checked::after {
+	background-color: #2a7ad7;
+	transition: transform .5s ease;
+}
+
+input[type="checkbox"]:checked ~ img:nth-of-type(1) {
+	transform: rotateY(180deg);
+}
+
+input[type="checkbox"]:checked ~ img:nth-of-type(2) {
+	transform: rotateY(0deg);
+}
 
 /*.picture {
 	background-image: url(http://tympanus.net/Blueprints/ProductGridLayout/images/1_front.png);
 }
 */
+
+/* images */
+
+img {
+	transition: transform .7s ease;
+}
+
+img:nth-of-type(1) {
+backface-visibility: hidden;
+transform: rotate(0deg) tranlateZ(0);
+}
+
+img:nth-of-type(2) {
+backface-visibility: hidden;
+transform: rotateY(180deg) translateZ(0);
+}
 
 
